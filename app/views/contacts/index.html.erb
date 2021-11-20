@@ -1,0 +1,84 @@
+
+
+<h1>Contacts</h1>
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Cell no</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="contactsTable">
+    <% @contacts.each do |contact| %>
+      <%= render 'contact_row', contact: contact %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact', new_contact_path, class: "btn btn-primary", 
+data: { bs_toggle: 'modal', bs_target: '#newContactModal', remote: true } %>
+<br>
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="newContactModal" tabindex="-1" aria-labelledby="newContactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newContactModalLabel">Create New Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="newContactForm">
+         </div>
+      
+    </div>
+  </div>
+</div>
+
+<!--------------------------------------- end ---------------------------------------->
+
+
+
+
+<!--------------------------------------- Modal Edit------------------------------------->
+
+<div class="modal fade" id="editContactModal" tabindex="-1" aria-labelledby="editContactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editContactModalLabel">Edit Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="editContactForm">
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<!-------------------------------- end Edit------------------------------------->
+
+
+<!------------------------------- Modal show -------------------------------------------------------->
+
+<div class="modal fade" id="showContactModal" tabindex="-1" aria-labelledby="showContactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="showContactModalLabel">Show Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="showContactDetails">
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!------------------------------------- end -------------------------------------->

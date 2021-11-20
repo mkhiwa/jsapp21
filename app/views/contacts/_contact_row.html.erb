@@ -1,0 +1,19 @@
+<tr id="contactRow_<%= contact.id %>">
+    <td><%= contact.name %></td>
+    <td><%= contact.location %></td>
+    <td><%= contact.mobile_no %></td>
+ <td>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Actions
+        </button>
+   
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><%= link_to 'Show', contact, class: "dropdown-item", data: { bs_toggle: 'modal', bs_target: '#showContactModal', remote: true } %></li>
+        <li><%= link_to 'Edit', edit_contact_path(contact), class: "dropdown-item", 
+        data: { bs_toggle: 'modal', bs_target: '#editContactModal', remote: true }  %></li>
+        <li><%#= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "dropdown-item" data: { bs_toggle: 'modal', bs_target: '#delContactmodal', remote: true } %></li>
+      </ul>
+    </div>
+  </td>
+</tr>

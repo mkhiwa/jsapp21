@@ -1,0 +1,30 @@
+<div class="container mt-3">
+
+  <div class="card" style="width: 22rem;">
+    <%= image_tag @contact.avatar, class:"card-img-top" %> 
+    <div class="card-body">
+      <h5 style="position: relative;" class="card-title"><%= @contact.name %></h5>
+      <p class="card-text">
+        <ul>
+       
+            <li>  <strong>ID:</strong>
+              <%= @contact.nid %></li>
+              <li><strong>Email:</strong>
+                <%= @contact.email %></li>
+                <li>
+                  <strong>Location:</strong>
+                    <%= @contact.location %>
+                </li>
+                <li>
+                  <strong>Mobile no:</strong>
+                  <%= @contact.mobile_no %>
+                </li>
+        </ul>
+
+      </p>
+      <%= link_to 'Back', contacts_path, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+</div>
+<br>
+<br>

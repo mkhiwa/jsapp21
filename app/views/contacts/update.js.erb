@@ -1,0 +1,6 @@
+<% if @contact.errors.any? %>
+ alert('Invalid Details');
+<% else %>
+ $("#contactRow_<%= @contact.id %>").replaceWith("<%= escape_javascript render('contact_row', contact: @contact) %>");
+ $(".close-modal").click();
+<% end %>

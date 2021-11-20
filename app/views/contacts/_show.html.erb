@@ -1,0 +1,35 @@
+
+
+<div class="modal-body">
+
+  <div class="card style="position: relative;">
+    <%= image_tag contact.avatar, class:"card-img-top img-fluid" %> 
+    <div class="card-body">
+      <h5 style="position: relative;" class="card-title"><%= @contact.name %></h5>
+      <p class="card-text">
+        <ul style="position: relative;">
+       
+            <li>  <strong>ID:</strong>
+              <%= contact.nid %></li>
+              <li><strong>Email:</strong>
+                <%= contact.email %></li>
+                <li>
+                  <strong>Location:</strong>
+                    <%= contact.location %>
+                </li>
+                <li>
+                  <strong>Mobile no:</strong>
+                  <%= contact.mobile_no %>
+                </li>
+        </ul>
+
+      </p>
+    
+    </div>
+  </div>
+
+</div>
+  <div class="modal-footer">
+     <%= link_to 'Back', contacts_path, class: "btn btn-outline-secondary" %>
+  <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+</div>
