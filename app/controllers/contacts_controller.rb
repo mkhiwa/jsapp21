@@ -59,6 +59,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to contacts_url, notice: "Contact was successfully destroyed." }
       format.json { head :no_content }
+      format.js
     end
   end
 

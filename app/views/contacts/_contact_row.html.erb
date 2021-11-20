@@ -12,7 +12,7 @@
         <li><%= link_to 'Show', contact, class: "dropdown-item", data: { bs_toggle: 'modal', bs_target: '#showContactModal', remote: true } %></li>
         <li><%= link_to 'Edit', edit_contact_path(contact), class: "dropdown-item", 
         data: { bs_toggle: 'modal', bs_target: '#editContactModal', remote: true }  %></li>
-        <li><%#= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "dropdown-item" data: { bs_toggle: 'modal', bs_target: '#delContactmodal', remote: true } %></li>
+        <li><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "dropdown-item" %></li>
       </ul>
     </div>
   </td>
